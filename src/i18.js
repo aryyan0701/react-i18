@@ -12,27 +12,27 @@ i18n
     resources: {
       en: {
         translation: {
-          heading:"Multi-language",
+          heading:"Multilingual",
           greeting: "Hello, welcome!",
           descriptions:{
             line1:"Welcome again",
-            line2: "You are on the multi language website."
+            line2: "You are on the Multilingual website."
           }
         },
       },
       hi: {
         translation: {
-          heading:"बहु-भाषा",
+          heading:"बहुभाषी",
           greeting: "नमस्ते, स्वागत है!",
           descriptions:{
             line1:"पुन: स्वागत है",
-            line2: "आप बहुभाषा वेबसाइट पर हैं."
+            line2: "आप बहुभाषी वेबसाइट पर हैं."
           }
         },
       },
       mr: {
         translation: {
-          heading:"बहु-भाषा",
+          heading:"बहुभाषिक",
           greeting: "नमस्कार स्वागत आहे!",
           descriptions:{
             line1:"पुन्हा स्वागत",
@@ -42,7 +42,7 @@ i18n
       },
       gu: {
         translation: {
-          heading:"બહુ-ભાષા",
+          heading:"બહુભાષી",
           greeting: "હેલો, સ્વાગત છે!",
           descriptions:{
             line1:"ફરી સ્વાગત છે",
