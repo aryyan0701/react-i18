@@ -2,6 +2,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 function Navbar() {
+  
+  const { t } = useTranslation();
+
   const languages = [
     { code: "en", lang: "English" },
     { code: "hi", lang: "Hindi" },
@@ -20,8 +23,8 @@ function Navbar() {
     <>
       <nav className="flex w-full h-20 bg-stone-400 dark:bg-slate-900 text-black dark:text-white justify-between p-3 px-5 items-center">
         <div className="flex space-x-2 items-center">
-          <h2 className="text-xl text-black dark:text-white font-semibold">
-            Ques-generator
+          <h2 className="text-xl text-black dark:text-white font-mono font-semibold">
+         {t('heading')}
           </h2>
         </div>
         <div>
@@ -34,7 +37,7 @@ function Navbar() {
           <div className="flex space-x-2 items-center">
             <select
               id="language-select"
-              className="w-full rounded-lg border-gray-300 text-gray-700"
+              className="w-full rounded-lg border-gray-300 text-gray-700 font-mono"
               onChange={changeLanguage}
               value={i18n.language}
             >
