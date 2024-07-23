@@ -1,6 +1,21 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
+  const languages = [
+    { code: "en", lang: "English" },
+    { code: "hi", lang: "Hindi" },
+    { code: "mr", lang: "Marathi" },
+    { code: "gu", lang: "Gujarati" },
+  ];
+
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (e) => {
+    const selectedLanguage = e.target.value;
+    i18n.changeLanguage(selectedLanguage);
+  };
+
   return (
     <>
       <nav className="flex w-full h-20 bg-stone-400 dark:bg-slate-900 text-black dark:text-white justify-between p-3 px-5 items-center">
@@ -11,24 +26,24 @@ function Navbar() {
         </div>
         <div>
           <label
-            htmlFor="HeadlineAct"
+            htmlFor="language-select"
             className="block text-sm font-medium text-gray-900"
           >
-            {" "}
-            Headliner{" "}
+            Language
           </label>
           <div className="flex space-x-2 items-center">
-            <span className="text-xl font-medium">Language</span>
-          <select
-            name="HeadlineAct"
-            id="HeadlineAct"
-            className="w-full rounded-lg border-gray-300 text-gray-700"
-          >
-            <option value="">Eng</option>
-            <option value="hi">Hindi</option>
-            <option value="mr">Marathi</option>
-            <option value="gu">Gujarati</option>
-          </select>
+            <select
+              id="language-select"
+              className="w-full rounded-lg border-gray-300 text-gray-700"
+              onChange={changeLanguage}
+              value={i18n.language}
+            >
+              {languages.map((lng) => (
+                <option key={lng.code} value={lng.code}>
+                  {lng.lang}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
       </nav>
